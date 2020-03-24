@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,300i,400&display=swap');
+
+// Some Variables
+$text-black : #707070;
+$wheat : #FEEAE9;
+$black : #1F1F1F;
+$deep-pink : #FF136F;
+$pink : #FF589B;
+$white : #fff;
+$deep-yellow : #FF9C35;
+$yellow : #FFD019;
+$aqua : #07F8C3;
+$light-blue : #4289FF;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+// navigation area 
+#edit-navbar {
+    padding: .5rem 0;
+    .navbar-logo {
+        height: 54px;
+        display: flex;
+        align-items: center;
+    }
+
+    #navbarNav {
+        form {
+            width: 60%;
+            margin-left: 6%;
+            position: relative;
+
+            @media screen and (max-width: 991.98px) {
+                width: 100%;
+                margin-left: 0;
+            }
+            
+            input {
+                width: 100%;
+                border: none;
+                background: #F8F8F8;
+                border-radius: 20px;
+                padding: 10px 20px;
+
+                &::placeholder {
+                    color: #cccccc;
+                    font-weight: 300;
+                    font-style: italic;
+                }
+                
+                @media screen and (max-width: 991.98px) {
+                    border-radius: 5px;
+                    padding: 10px 5px;
+                }
+            }
+
+            a {
+                position: absolute;
+                right: 26px;
+                color: #BABABA;
+                top: 6px;
+
+                img {
+                    width: 18px;
+                }
+            }            
+        }
+        ul {
+            li{
+                a{
+                    white-space: nowrap;
+                    color: #707070;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+// Carousel Area 
+.edit-carousel {
+    .edit-carousel__controls {
+        li {
+            width: 16px;
+            height: 10px;
+            background: linear-gradient(to bottom, $pink, $deep-pink);  
+            border: none;
+            border-radius: 10px; 
+            transition: .6s ease;            
+            &.active {
+                width: 40px;            
+            }   
+        }
+    }
+}
+
+.edit-carousel__carousel-item {
+    padding: 40px 90px;
+    border-radius: 10px;
+    background-color: $wheat;
+
+    @media screen and (max-width: 767.98px) {
+        padding: 40px 20px;
+    }
+
+    .edit-carousel__title-and-para {
+        margin-bottom: 40px;
+
+        h2 {
+            font-size: 36px;
+            color: $black;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 15px;
+            font-weight: 300;
+        }
+    }
+
+    .edit-carousel__price-and-purchase {
+        h2 {
+            font-size: 36px;
+            color: $deep-pink ;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 25px;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: $white;
+            background-image: linear-gradient(to bottom, $pink, $deep-pink);
+            border-radius: 10px;
+            text-decoration: none;
+        }
+    }
+
+    .edit-carousel__image {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// Categories area 
+.categories {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    border-radius: 10px;
+
+    @media screen and (max-width: 991.98px) {
+        padding: 10px 20px;
+    }    
+
+    @media screen and (max-width: 767.98px) {
+        padding: 10px 40px;
+    }
+
+    &:nth-child(2) {
+        background: red;
+    }
+
+    .categories__title {
+        h2 {
+            font-size: 42px;
+            color: $white;
+
+            @media screen and (max-width: 991.98px) {
+                font-size: 30px;
+            }
+
+            @media screen and (max-width: 767.98px) {
+                font-size: 42px;
+            }
+        }
+    }
+
+    .categories__image {
+        img {
+            width: 110px;
+
+            @media screen and (max-width: 991.98px) {
+                width: 90px;
+            }
+
+            @media screen and (max-width: 767.98px) {
+                width: 110px;
+            }
+        }
+    }
+}
+
+.categories-bg1 {
+    background-image: linear-gradient(to bottom, $yellow, $deep-yellow);
+}
+
+.categories-bg2 {
+    background-image: linear-gradient(to bottom, $pink, $deep-pink);
+}
+
+.categories-bg3 {
+    background-image: linear-gradient(to bottom, $light-blue, $aqua);
+}
+
+//Shoes area 
+.edit-card {
+    @media screen and (max-width: 767.98px) {
+        flex-direction: column;
+    }
+    .card {
+        padding: 20px 25px;
+        text-align: center;
+        border: none;
+        background-color: $white;
+        border-radius: 10px;
+        transition: .6s ease;
+        margin-bottom: 20px;
+        &:hover {
+            box-shadow: 0 0 20px transparentize(#000, .94);
+        }        
+
+        .card-body {
+            padding: 1.25rem 1.25rem 0rem;            
+            h5 {
+                font-size: 20px;
+                color: $black;
+                font-weight: 400;
+            }
+
+            p {
+                font-size: 14px;
+                font-weight: 300;
+                margin-bottom: 30px;
+            }
+        }
+
+        .card-footer {
+            background-color: #fff;
+            border: none;     
+            a {
+                display: inline-block;
+                padding: 10px 25px;
+                font-size: 16px;
+                text-transform: uppercase;
+                color: $white;
+                background-color: #000;
+                border-radius: 10px;
+                text-decoration: none;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+// footer area 
+.footer {
+    padding: 80px 0;
+    background-color: $wheat;
+    border-radius: 10px;
+
+    .heading-and-text {
+        margin-bottom: 40px;
+
+        h2 {
+            font-size: 26px;
+            color: $black;
+        }
+        p {
+            font-size: 18px;
+            font-weight: 300;
+        }
+    }
+
+    .input-group {
+        input {
+            padding: 25px 30px;
+            border: none;
+            background-color: $white;
+            border-radius: 5px;
+        }
+
+        button {
+            color: $white;
+            background-image: linear-gradient(to bottom, $pink, $deep-pink);
+            padding: 0 30px;
+        }
+    }
+
+}
